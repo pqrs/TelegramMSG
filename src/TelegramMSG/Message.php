@@ -8,21 +8,16 @@ use \unreal4u\TelegramAPI\Telegram\Methods\SendMessage;
 
 class Message
 {
-    public static function send()
+    public static function send( $user_id, $bot_token, $message )
     {
-    	// Your telegram User ID
-    	define( "TELEGRAM_USER_ID", "XXXXXXXX"                                      );
 
-		// Telegram bot token
-		define( "BOT_AUTH_TOKEN",   "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXX-XXXXXXX" );
-
-	    $tgLog = new TgLog(BOT_AUTH_TOKEN);
+	    $tgLog = new TgLog($bot_token);
 
 	    $sendMessage = new SendMessage();
 
-	    $sendMessage->chat_id = TELEGRAM_USER_ID;
+	    $sendMessage->chat_id = $user_id;
 
-	    $sendMessage->text = "Esto es una prueba";
+	    $sendMessage->text = $message;
 
 	    try {
 
