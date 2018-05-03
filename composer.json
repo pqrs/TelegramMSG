@@ -1,0 +1,19 @@
+{
+    "name": "pqrs/telegrammsg",
+    "description": "Sends a message to a Telegram bot",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pqrs",
+            "email": "alvaro@pqrs.es"
+        }
+    ],
+    "require": {
+        "unreal4u/telegram-api": "~2.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "TelegramMSG": "src/"
+        }
+    }
+}
